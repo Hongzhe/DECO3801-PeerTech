@@ -1,0 +1,205 @@
+footer{
+	bottom:0;
+	background-color: #4C4C4C;
+/*	position: fixed;
+	margin-top:80px;
+	width:100%;*/
+}
+
+#bottom_links{
+	color: white;
+	margin-top: 25px;
+	font-size: 1.1125rem;
+}
+
+#main_tab.tabs-content{
+	border-style: solid;
+	border-color: #00B800;
+	border-width: 3px;
+}
+
+#login_tab.tabs-content{
+	border-style: solid;
+	border-color: #00B800;
+	border-width: 3px;
+	background-color: #00B800;
+	padding: 10px 0 0 15px;
+}
+
+#login.large-12.columns{
+	margin-top: 150px;
+}
+#label{
+	color:white;
+}
+
+
+#back_pic.large-12.columns{
+	height: 700px;
+	background: url('../img/banner.jpg');
+	background-size: 1200px 700px;
+	background-repeat: no-repeat;
+	margin-bottom: 30px;
+}
+
+#row_height.row{
+	height: 700px;
+}
+
+#logo{
+	height: 40px;
+	width: 40px;
+	margin: 8px 0 0 0;
+}
+
+#font{
+	height: 40px;
+	width: 120px;
+	margin: 18px 0 0 0;
+}
+
+#pw{
+	font-size: 15px;
+	color:white;
+	border-bottom: 1px solid white;
+	margin-right: 20px;
+}
+
+#content.large-12.columns{
+	padding: 50px;
+}
+
+#make_bid{
+	color: green;
+	border-bottom: 1px solid green;
+}
+
+#welcome{
+	border-right: 1px solid grey;
+	padding-right: 10px;
+	color:white;
+}
+
+#name.large-12.columns{
+	margin: 20px 0 20px 0;
+}
+
+#word1{
+	margin: 30px 0 0 50px;
+	color:#00B800;
+}
+
+#word2{
+	margin-left: 65px;
+	color:#00B800;
+}
+
+#word3{
+	margin-left: 85px;
+	color:#00B800;
+	font-weight: bold;
+}
+
+#profile_form.large-12.columns{
+	padding-right: 250px;
+}
+
+#profile_form2.large-12.columns{
+	padding-right: 250px;
+}
+
+#prefs_form.large-12.columns{
+	padding-right: 250px;
+}
+
+#pref_pop{
+	border:2px solid #00B800;
+	padding-top: 20px;
+}
+
+#space.large-1.columns{
+	color:white;
+}
+
+#submit_button{
+	margin-right: 380px;
+}
+
+#cancel_button{
+	margin-right: 30px;
+}
+
+#application_tablist.tabs{
+	margin: 20px 0 0 350px;
+}
+
+
+#application_tab{
+	padding: 0.1rem 0.5rem;
+	margin-right: 20px;
+}
+
+#application_title{
+	margin: 30px 30px;
+	text-align: center;
+}
+
+#h4Underline {
+	border-bottom: 2px solid #007400;
+	margin-top: 80px;
+}
+
+#about_pic{
+	margin-left: 200px;
+}
+
+.thumb {
+	max-width: 20px;
+	height: auto;
+	margin-left: 1em;
+}
+
+.profile_pic {
+	max-width: 130px;
+	height: auto;
+	border: 2px solid #007400;
+	border-radius: 10px;
+}
+
+#title_bg{
+	margin-top: 30px;
+	background-color: #00B800;
+	color: white; 
+	padding-left: 10px;
+}
+
+#loan_status {
+	color: #00b800;
+	font-weight: bold;
+}
+
+#bid_form{
+	/*margin-top: 30px;*/
+	padding: 10px;
+	border: 2px solid #00b800;
+}
+
+dl {
+ width:100%;
+ overflow:hidden;
+ margin: 0 0 0 0;
+}
+
+dt {
+ float:left;
+ width:50%; 
+}
+
+dd {
+ float:left;
+ width:50%; 
+}
+
+.atitle {
+	color: #4d4d4d;
+}
