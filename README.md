@@ -1,3 +1,3 @@
 DECO3801-PeerTech
 =================
-This is student project for University of Queensland. 
+This is a student project for University of Queensland. 
