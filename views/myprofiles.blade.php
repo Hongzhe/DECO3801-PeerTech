@@ -2,7 +2,7 @@
 <header>
 	<link rel="stylesheet" href="../foundation-5.4.0/css/foundation.css">
 	<link rel="stylesheet" href="../foundation-5.4.0/css/css_self.css">
-
+		<script language="javascript" type="text/javascript" src="../foundation-5.4.0/js/getAgeJS.js"></script>
 </header>
 <body>
 
@@ -206,7 +206,21 @@
 								<dt>Gender:</dt>
 								<dd>{{ $pdata['usergender'] or "" }}</dd>
 								<dt>Age:</dt>
-								<dd>30</dd>
+								<dd id="dob"> 
+									{{ $pdata['userdob'] or "" }}
+									<script>
+										var dob = {{ $pdata['userdob'] or "" }};
+										var dobSplit = dob.split("-");
+										console.log(dobSplit);
+										
+										console.log("----");
+										var dobString = new Date({{ $pdata['userdob'] or "" }});
+										console.log("----");
+										getAge(dobString);
+									</script>
+									
+								</dd>
+								
 							</div>
 						</dl>
 
@@ -997,6 +1011,7 @@
 	<script src="../foundation-5.4.0/js/foundation/foundation.topbar.js"></script>
 	<script src="../foundation-5.4.0/js/foundation/foundation.tab.js"></script>
 	<script src="../foundation-5.4.0/js/foundation/foundation.reveal.js"></script>
+	<script language="javascript" type="text/javascript" src="../foundation-5.4.0/js/getAgeJS.js"></script>
 	<script>
 	$(document).foundation();
 	getStep();

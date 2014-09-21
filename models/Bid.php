@@ -18,9 +18,9 @@ class Bid extends Eloquent {
 			   -> where('user_id','=',$user_id)
 			   -> count();
 		if($numbid == 0 ) {
-			return FALSE;
+			return false;
 		}
-		return TRUE;
+		return true;
 	}
 
 	/*for one to many founding, currently not useful*/

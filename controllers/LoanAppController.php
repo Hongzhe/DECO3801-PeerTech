@@ -57,6 +57,7 @@ class LoanAppController extends BaseController {
 		$loanId = $loan_app-> loan_id;
 		$weight= $loan_app-> evaluateWeight($id, $loanId);
 		$loan_app->weight = $weight;
+		//$loan_app-> user_id=  $id;
 		$loan_app->save();
 
 		return $weight;

@@ -29,16 +29,16 @@
 
 <div class="row" id="row_height">
   <div class="large-12 columns">
-    <div id="back_pic" class="large-12 columns">
-      <div class="right">
-        <div class="large-12 columns" id="login">
+    <div id="back_pic">
+      <div class="large-4 columns right">
+        <div id="login">
 
 
           <! login and register box -->
 
           <ul class="tabs" data-tab role="tablist">
-            <li class="tab-title active" role="presentational"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Member Login</a></li>
-            <li class="tab-title" role="presentational"><a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">Register</a></li>
+            <li class="tab-title active" role="presentational"><a href="#panel2-1" id="login_title" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Member Login</a></li>
+            <li class="tab-title" role="presentational"><a href="#panel2-2" id="login_title" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">Register</a></li>
           </ul>
 
           <div class="tabs-content" id="login_tab">
@@ -47,7 +47,7 @@
               <!-- <form> -->
                {{ Form::open(array('action'=>'HomeController@doLogin','name'=>'logForm','id'=>'loginForm')) }}
                 <div class="row">
-                  <div class="large-10 columns">
+                  <div class="large-12 columns">
                   {{ Form::label('Username','Username',array('id'=> 'label')) }}
                   {{ Form::text('Username',null,array('class'=>'required','id'=>'txtbox')) }}
                     <!-- <label id="label">Username:
@@ -56,7 +56,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="large-10 columns">
+                  <div class="large-12 columns">
                   {{ Form::label('Password','Password',array('id'=>'label')) }}
                   {{ Form::password('Password',null,array('class'=>'required password','id'=>'txtbox')) }}
                    <!--  <label id="label">Password:
@@ -64,9 +64,11 @@
                     </label> -->
                   </div>
                 </div>
-                <p><a href="password/reminder" id="pw">Forgot password?</a>
-                {{ Form::checkbox('remember_me') }} <span>remember me</span> 
-                  <a href="#" id='loginBtn' class="secondary tiny button">Login</a></p>
+                <p id="label2">
+                {{ Form::checkbox('remember_me') }} remember me
+                <a href="password/reminder" id="pw">Forgot password?</a>
+                  <a href="#" id='loginBtn' class="secondary small button expand">Login</a></p>
+                  
                <!-- {{ Form::submit('Login',null,array('id'=>'doLogin3','class'=>'buttondetail')) }} -->
                {{ Form::close() }}
                <!--  </form> -->
@@ -77,64 +79,37 @@
 
                 <!-- <form> -->
                   <div class="row">
-                    <div class="large-10 columns">
-                      <div class="row">
-                        <div class="large-4 columns">
-                          <label for="right-label" class="right inline" id="label">Email Address*:</label>
-                        </div>
-                        <div class="large-7 columns">
+                    <div class="large-12 columns">
+                        {{ Form::label('Email Address*','Email Address*',array('id'=>'label')) }}
                           <!-- <input type="text" id="right-label"> -->
                            {{ Form::text('user_email',null,array('id'=>'right-label','size'=>'30','class'=>'required email')) }}
-                          <div class="right">
-                         <!--    <a class="round tiny button">Check Availability</a> -->
-                          </div>
-                        </div>
-                      </div>
+                          
                     </div>
                   </div>
 
 
                   <div class="row">
-                    <div class="small-10 columns">
-                      <div class="row">
-                        <div class="small-4 columns">
-                          <label for="right-label" class="right inline" id="label">Password*:</label>
-                        </div>
-                        <div class="small-7 columns">
+                    <div class="large-12 columns">
+                        {{ Form::label('Password*','Password*',array('id'=>'label')) }}
                          <!--  <input type="text" id="right-label"> -->
                           {{ Form::password('pwd',null,array('id'=>'right-label','class'=>'required password','minlength'=>'5')) }}
-                        </div>
-                      </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="small-10 columns">
-                      <div class="row">
-                        <div class="small-5 columns">
-                          <label for="right-label" class="right inline" id="label">Retype Password*:</label>
-                        </div>
-                        <div class="small-7 columns">
-                         {{ Form::password('pwd2',null,array('id'=>'right-label','class'=>'required password','minlength'=>'5' )) }}
-                         <!--  <input type="text" id="right-label"> -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  
 
-                  <div class="row">
-                    <div class="small-10 columns">
-                     {{ Form::checkbox('terms',null, false) }} 
+                  
+                     <p id="label">{{ Form::checkbox('terms',null, false) }} 
                      <!-- <input id="checkbox1" type="checkbox"><label for="checkbox1" id="label"> -->
                      I have read and accept terms and conditions
-                     <div class="right" id="register_button">
+                 
                    <!--   {{ Form::submit('Register',null,array('id'=>'doRegister','value'=>'Register','type'=>'submit')) }} -->
-                       <p><a href="#" id='regBtn' class="secondary tiny button">Register</a></p>
-                     </div> 
-                   </div>
-                 </div>
+                       <a href="#" id='regBtn' class="secondary small button expand">Register</a></p>
+                  
+                   
                  {{ Form::close() }}
               <!--  </form> -->
              </section>
+
            </div>
          </div>
        </div>
@@ -164,8 +139,8 @@
 <footer>
     <div class="row">
       <div class="large-6 columns">
-        <img id="logo" src="img/logos.png">
-          <img id="font" src="img/font.png">
+        <img id="logo" src="../foundation-5.4.0/img/logos.png">
+          <img id="font" src="../foundation-5.4.0/img/font.png">
       </div>
       <div class="large-6 columns">
         <ul class="inline-list right">

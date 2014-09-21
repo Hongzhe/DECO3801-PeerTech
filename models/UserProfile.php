@@ -22,7 +22,9 @@ class UserProfile extends Eloquent {
 		$usersuburb = $userProfile-> suburb;
 		$userstate = $userProfile-> state;
 		$userpostcode = $userProfile-> postcode;
-		$userdob = $userProfile-> dob;
+		$userdobday = $userProfile-> day_dob;
+		$userdobmonth = $userProfile-> month_dob;
+		$userdobyear = $userProfile-> year_dob;
 		$userphone = $userProfile-> phone;
 		$usertfn = $userProfile-> tfn;
 		$userpidtype = $userProfile-> pidtype;
@@ -41,7 +43,9 @@ class UserProfile extends Eloquent {
 				'usersuburb' => $usersuburb,
 				'userstate' => $userstate,
 				'userpostcode' => $userpostcode,
-				'userdob' => $userdob,
+				'day_dob' => $userdobday,
+				'month_dob' => $userdobmonth,
+				'year_dob' => $userdobyear,
 				'userphone' => $userphone,
 				'usertfn' => $usertfn,
 				'userpidtype' => $userpidtype,

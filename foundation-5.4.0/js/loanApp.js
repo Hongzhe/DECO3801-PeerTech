@@ -3,7 +3,7 @@ function getStep() {
 	var nextBtn = $('.nextForm');  //get the 'next' button
 	var prevBtn = $('.prevForm');
 	var index=0;
-	var submitBtn = $('#confirm ');
+	var submitBtn = $(' .confirmBtn');
 	var tabList = $('ul#application_tablist li'); 
 
 	nextBtn.on('click', function() {
@@ -24,6 +24,7 @@ function getStep() {
 
 	/* sned loan application information to back end through Ajax*/
 	submitBtn.on('click', function() {
+		console.log("button works");
 		var info = $('#form1,#form2,#form3').serialize();
 		console.log(info);
 		$.ajax({
@@ -32,7 +33,7 @@ function getStep() {
 			datatype:'json',
 			data:info,
 			success:function(json) {
-				window.location.href="http://deco3801-05.uqcloud.net/profile";
+				window.location.href="http://deco3801-05.uqcloud.net/mytransaction";
 			}
 		})
 	});
@@ -60,3 +61,18 @@ function enableBtns() {
 	});
 }
 
+function make_bid() {
+	var isDisplay= false;
+	$('.mkbid').on('click',function(){
+		var loanId= $(this).attr('data');
+		isDisplay= true;
+		$("#make_bid").attr({
+			display:"block",
+			visibility:'visible',
+			opacity:'1'
+		});
+		$('.reveal-model-bg').show();
+		console.log("after the show");
+		return false;
+	})
+}

@@ -53,7 +53,7 @@ class HomeController extends BaseController {
 			$Isremember = (Input::has('remember_me')) ? true:false;
 			if(Auth::attempt($userdata, $Isremember)){ //remember user
 				Session::put('usermail',$userdata['email']);
-				return Redirect::route('myprofile');
+				return Redirect::route('mytransaction');
 			}else{
 
 				echo 'login failed '.$userdata['email']."  ".$userdata['password'];

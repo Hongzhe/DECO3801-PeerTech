@@ -78,3 +78,14 @@ Route::post('saveFinancialProfile','UserProfileController@saveFinancialProfile')
 
 //Route to prcess the Ajax request to finish applying loan
 Route::post('submitLoan','LoanAppController@applyLoans');
+
+
+/***** after seperate pages ******/
+Route::get('mytransaction',array('before'=>'guest','as'=>'mytransaction', 'uses'=>'UserProfileController@mytransaction'));
+Route::get('myprofile',array('before'=>'guest','as'=>'profile', 'uses'=>'UserProfileController@profile'));
+Route::get('borrow', array('before'=>'guest','as'=>'borrow', 'uses'=>'UserProfileController@borrow'));
+Route::get('lend',array('before'=>'guest','as'=>'lend', 'uses'=>'UserProfileController@lend'));
+
+Route::get('mb',function(){
+	return View::make('mkbid');
+});
